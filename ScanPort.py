@@ -121,8 +121,8 @@ if __name__ == '__main__':
     stop = 450
     step = int((stop - start) / 10)
     scan_ports = range(start, stop, step)
-    # if scan_ports[len(scan_ports) - 1] < stop:
-    #     scan_ports.append(stop)
+    if scan_ports[len(scan_ports) - 1] < stop:
+        scan_ports.append(stop)
     for i in range(len(scan_ports) - 1):
         opl = range_scan(ipsource, ipdest, scan_ports[i], scan_ports[i + 1])
         open_port_list.append(opl)
