@@ -114,21 +114,22 @@ def range_scan(source_ip, dest_ip, start_port, end_port) :
     return syn_ack_received
 
 if __name__ == '__main__':
-    open_port_list = []
-    ipsource = '192.168.100.70'
-    ipdest = '192.168.100.72'
-    start = 100
-    stop = 450
-    step = int((stop - start) / 10)
-    scan_ports = range(start, stop, step)
-    if scan_ports[len(scan_ports) - 1] < stop:
-        scan_ports.append(stop)
-    for i in range(len(scan_ports) - 1):
-        opl = range_scan(ipsource, ipdest, scan_ports[i], scan_ports[i + 1])
-        open_port_list.append(opl)
-    for i in range(len(open_port_list)):
-        print('Process #: ', i, ' Open ports: ', open_port_list[i])
-    print('A list of all open ports found: ')
-    for i in range(len(open_port_list)):
-        for j in range(len(open_port_list[i])):
-            print(open_port_list[i][j], ', ')
+    pass
+    # open_port_list = []
+    # ipsource = '192.168.100.70'
+    # ipdest = '192.168.100.72'
+    # start = 100
+    # stop = 450
+    # step = int((stop - start) / 10)
+    # scan_ports = range(start, stop, step)
+    # if scan_ports[len(scan_ports) - 1] < stop:
+    #     scan_ports.append(stop)
+    # for i in range(len(scan_ports) - 1):
+    #     opl = range_scan(ipsource, ipdest, scan_ports[i], scan_ports[i + 1])
+    #     open_port_list.append(opl)
+    # for i in range(len(open_port_list)):
+    #     print('Process #: ', i, ' Open ports: ', open_port_list[i])
+    # print('A list of all open ports found: ')
+    # for i in range(len(open_port_list)):
+    #     for j in range(len(open_port_list[i])):
+    #         print(open_port_list[i][j], ', ')
